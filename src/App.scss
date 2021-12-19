@@ -1,0 +1,43 @@
+$font-stack: Rigteous, Helvetica, sans-serif;
+$primary-color: #fff;
+$main-background-color: #6B59DA;
+$accent-colors: #34B0F4;
+
+@font-face {
+    font-family: 'Rigteous';
+    src: url(fonts/Righteous/Righteous-Regular.ttf);
+}
+
+%rounded {
+  border-radius: 10px
+}
+
+%button {
+  background: $accent-colors;
+  @extend %rounded;
+  color: $primary-color;
+  font: 18px bold;
+  padding: 16px;
+}
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background: $main-background-color;
+  text-align: center;
+  width: 100%;
+
+  input {
+    @extend %rounded;
+    width: 100%;
+    height: 40px;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+
+  }
+
+  .button {
+    @extend %button;
+  }
+}
